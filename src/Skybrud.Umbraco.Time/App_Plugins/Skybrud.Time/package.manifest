@@ -1,0 +1,8 @@
+﻿{
+  "javascript": [
+    "/App_Plugins/Skybrud.Time/Scripts/Controllers/TimePicker.js"
+  ],
+  "css": [
+    "/App_Plugins/Skybrud.Time/Styles/Default.css"
+  ]
+}

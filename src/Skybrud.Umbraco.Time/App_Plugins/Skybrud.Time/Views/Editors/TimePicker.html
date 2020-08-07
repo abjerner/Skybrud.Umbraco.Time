@@ -1,0 +1,15 @@
+﻿<div class="skybrud-timepicker" ng-controller="Skybrud.TimePicker.Controller">
+    <div class="input-append">
+        <div ng-show="model.value">
+            <input class="hour" type="number" min="0" max="23" ng-model="hour" ng-change="update()" />
+            <input class="minute" type="number" min="0" max="59" ng-model="minute" ng-change="update()" />
+        </div>
+        <button type="button" ng-if="!model.value" ng-click="add()"></button>
+        <span class="on-top" ng-click="clear()" role="button" tabindex="0" aria-hidden="false" ng-show="model.value">
+            <i class="icon-delete"></i>
+        </span>
+        <span class="add-on">
+            <i class="icon-time"></i>
+        </span>
+    </div>
+</div>
