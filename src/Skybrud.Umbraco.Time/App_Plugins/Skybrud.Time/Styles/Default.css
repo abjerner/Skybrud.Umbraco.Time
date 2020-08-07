@@ -38,3 +38,11 @@
 .skybrud-timepicker span[role=button] {
   cursor: pointer;
 }
+a.skybrud-timepicker-link {
+  text-decoration: underline;
+}
+a.skybrud-timepicker-link:hover,
+a.skybrud-timepicker-link:active,
+a.skybrud-timepicker-link:focus {
+  text-decoration: none;
+}
