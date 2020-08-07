@@ -1,5 +1,6 @@
 ﻿using System;
 using Skybrud.Umbraco.Time.Models;
+using Umbraco.Core;
 using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Core.PropertyEditors;
 
@@ -8,7 +9,7 @@ namespace Skybrud.Umbraco.Time.PropertyEditors.ValueConverters {
     public class TimeValueConverter : PropertyValueConverterBase {
 
         public override bool IsConverter(IPublishedPropertyType propertyType) {
-            return propertyType.EditorAlias == "Advodan.Time";
+            return propertyType.EditorAlias.InvariantEquals(TimePropertyEditor.EditorAlias);
         }
 
         public override object ConvertSourceToIntermediate(IPublishedElement owner, IPublishedPropertyType propertyType, object source, bool preview) {
