@@ -18,6 +18,9 @@ namespace Skybrud.Umbraco.Time.PropertyEditors {
         /// </summary>
         public TimePropertyEditor(ILogger logger) : base(logger) { }
 
+        /// <inheritdoc/>
+        protected override IConfigurationEditor CreateConfigurationEditor() => new TimeConfigurationEditor();
+
     }
 
 }

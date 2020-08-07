@@ -18,8 +18,10 @@ namespace Skybrud.Umbraco.Time.PropertyEditors.ValueConverters {
 
         public override object ConvertIntermediateToObject(IPublishedElement owner, IPublishedPropertyType propertyType, PropertyCacheLevel referenceCacheLevel, object inter, bool preview) {
 
+
+
             if (inter is string str && TimeSpan.TryParse(str, out TimeSpan time)) {
-                return new TimeOffset(time);
+                return new TimeOffset(time, propertyType.DataType.ConfigurationAs<TimeConfiguration>());
             }
 
             return null;
