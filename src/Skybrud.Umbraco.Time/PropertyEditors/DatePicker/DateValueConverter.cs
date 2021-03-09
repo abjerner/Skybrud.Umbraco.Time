@@ -10,7 +10,7 @@ namespace Skybrud.Umbraco.Time.PropertyEditors.DatePicker {
     public class DateValueConverter : DatePickerValueConverter {
 
         public override bool IsConverter(IPublishedPropertyType propertyType) {
-            return propertyType.EditorAlias.InvariantEquals(DatePropertyEditor.EditorAlias);
+            return propertyType.EditorAlias.InvariantEquals(DateEditor.EditorAlias);
         }
 
         public override Type GetPropertyValueType(IPublishedPropertyType propertyType) {

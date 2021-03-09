@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Umbraco.Core.PropertyEditors;
 
-namespace Skybrud.Umbraco.Time.PropertyEditors {
+namespace Skybrud.Umbraco.Time.PropertyEditors.DatePicker {
 
     public class DateConfigurationEditor : ConfigurationEditor {
         
