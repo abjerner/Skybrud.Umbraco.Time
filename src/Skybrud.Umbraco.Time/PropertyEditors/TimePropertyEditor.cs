@@ -6,7 +6,7 @@ namespace Skybrud.Umbraco.Time.PropertyEditors {
     /// <summary>
     /// Represents a time property editor.
     /// </summary>
-    [DataEditor(EditorAlias, EditorType.PropertyValue, "Skybrud Time", EditorView, Group = "Skybrud.dk", Icon = "icon-time")]
+    [DataEditor(EditorAlias, EditorType.PropertyValue, "Skybrud Time", EditorView, Group = "Skybrud.dk", Icon = "icon-time", ValueType = ValueTypes.String)]
     public class TimePropertyEditor : DataEditor {
 
         internal const string EditorAlias = "Skybrud.Umbraco.Time";
