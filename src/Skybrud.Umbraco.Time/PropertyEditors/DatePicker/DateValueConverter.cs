@@ -5,7 +5,7 @@ using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Core.PropertyEditors;
 using Umbraco.Core.PropertyEditors.ValueConverters;
 
-namespace Skybrud.Umbraco.Time.PropertyEditors.ValueConverters {
+namespace Skybrud.Umbraco.Time.PropertyEditors.DatePicker {
     
     public class DateValueConverter : DatePickerValueConverter {
 
