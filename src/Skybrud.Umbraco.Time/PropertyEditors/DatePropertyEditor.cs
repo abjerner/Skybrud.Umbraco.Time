@@ -4,7 +4,7 @@ using Umbraco.Web.PropertyEditors;
 
 namespace Skybrud.Umbraco.Time.PropertyEditors {
     
-    [DataEditor(EditorAlias, EditorType.PropertyValue, "Skybrud Date", EditorView, ValueType = ValueTypes.DateTime, Group = "Skybrud.dk", Icon = "icon-calendar")]
+    [DataEditor(EditorAlias, EditorType.PropertyValue, "Skybrud Date", EditorView, ValueType = ValueTypes.String, Group = "Skybrud.dk", Icon = "icon-calendar")]
     public class DatePropertyEditor : DateTimePropertyEditor {
 
         internal const string EditorAlias = "Skybrud.Umbraco.Date";
