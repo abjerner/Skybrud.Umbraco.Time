@@ -1,5 +1,5 @@
 ﻿using System;
-using Skybrud.Umbraco.Time.Models;
+using Skybrud.Umbraco.Time.PropertyEditors.TimeOffset;
 using Umbraco.Core;
 using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Core.PropertyEditors;
@@ -9,7 +9,7 @@ namespace Skybrud.Umbraco.Time.PropertyEditors.ValueConverters {
     public class TimeValueConverter : PropertyValueConverterBase {
 
         public override bool IsConverter(IPublishedPropertyType propertyType) {
-            return propertyType.EditorAlias.InvariantEquals(TimePropertyEditor.EditorAlias);
+            return propertyType.EditorAlias.InvariantEquals(TimeOffsetEditor.EditorAlias);
         }
 
         public override object ConvertSourceToIntermediate(IPublishedElement owner, IPublishedPropertyType propertyType, object source, bool preview) {
@@ -19,7 +19,7 @@ namespace Skybrud.Umbraco.Time.PropertyEditors.ValueConverters {
         public override object ConvertIntermediateToObject(IPublishedElement owner, IPublishedPropertyType propertyType, PropertyCacheLevel referenceCacheLevel, object inter, bool preview) {
 
             if (inter is string str && TimeSpan.TryParse(str, out TimeSpan time)) {
-                return new TimeOffset(time, propertyType.DataType.ConfigurationAs<TimeConfiguration>());
+                return new Models.TimeOffset(time, propertyType.DataType.ConfigurationAs<TimeOffsetConfiguration>());
             }
 
             return null;
@@ -31,7 +31,7 @@ namespace Skybrud.Umbraco.Time.PropertyEditors.ValueConverters {
         }
 
         public override Type GetPropertyValueType(IPublishedPropertyType propertyType) {
-            return typeof(TimeOffset);
+            return typeof(Models.TimeOffset);
         }
 
     }

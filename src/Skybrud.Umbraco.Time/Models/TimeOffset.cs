@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 using Skybrud.Essentials.Json.Converters;
-using Skybrud.Umbraco.Time.PropertyEditors;
+using Skybrud.Umbraco.Time.PropertyEditors.TimeOffset;
 
 namespace Skybrud.Umbraco.Time.Models {
 
@@ -16,7 +16,7 @@ namespace Skybrud.Umbraco.Time.Models {
 
         public int Minutes => _time.Minutes;
 
-        public TimeOffset(TimeSpan time, TimeConfiguration configuration) {
+        public TimeOffset(TimeSpan time, TimeOffsetConfiguration configuration) {
             _time = time;
             _format = string.IsNullOrWhiteSpace(configuration?.OutputFormat) ? "hh\\:mm" : configuration.OutputFormat;
         }
