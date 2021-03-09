@@ -55,3 +55,47 @@ a.skybrud-timepicker-link {
         text-decoration: none;
     }
 }
+
+
+.skybrud-unix-timestamp {
+
+    > div {
+        display: flex;
+
+        > div + div {
+            margin-left: 10px;
+            line-height: 32px;
+        }
+    }
+
+    .input-append .on-top {
+        border: 0;
+        position: absolute;
+        margin-left: -31px;
+        margin-top: 1px;
+        display: inline-block;
+        padding: 5px 6px 3px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: center;
+        background-color: #fff;
+        color: #1b264f;
+    }
+
+    .input-append .add-on,
+    .input-append .on-top {
+        padding-top: 7px; /* Umbraco uses 5px for the top padding, in which case the icon isn't vertically centered */
+        padding-bottom: 1px;
+    }
+
+}
+
+.skybrud-timezone {
+    > div {
+        position: relative;
+    }
+    select {
+        width: 100%;
+    }
+}

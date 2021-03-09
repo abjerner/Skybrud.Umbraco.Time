@@ -40,6 +40,7 @@
     <Content Include="App_Plugins\Skybrud.Time\**\*.html" />
     <Content Include="App_Plugins\Skybrud.Time\**\*.js" />
     <Content Include="App_Plugins\Skybrud.Time\Lang\*.xml" />
+    <None Remove="App_Plugins\Skybrud.Time\Styles\Default.min.css" />
     <Content Include="App_Plugins\Skybrud.Time\package.manifest" />
   </ItemGroup>
 
