@@ -1,12 +1,11 @@
 ﻿using System;
-using Skybrud.Umbraco.Time.PropertyEditors.TimeOffset;
 using Umbraco.Core;
 using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Core.PropertyEditors;
 
-namespace Skybrud.Umbraco.Time.PropertyEditors.ValueConverters {
+namespace Skybrud.Umbraco.Time.PropertyEditors.TimeOffset {
     
-    public class TimeValueConverter : PropertyValueConverterBase {
+    public class TimeOffsetValueConverter : PropertyValueConverterBase {
 
         public override bool IsConverter(IPublishedPropertyType propertyType) {
             return propertyType.EditorAlias.InvariantEquals(TimeOffsetEditor.EditorAlias);
