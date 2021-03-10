@@ -72,11 +72,12 @@
 
     function init() {
 
+        if ($scope.model.value === null) return;
+        if ($scope.model.value === "") return;
+
         // Convert from UNIX time
-        if ($scope.model.value !== "") {
-            vm.date = new Date($scope.model.value * 1000);
-            vm.value = vm.rawValue = moment(vm.date).format(vm.config.momentFormat);
-        }
+        vm.date = new Date($scope.model.value * 1000);
+        vm.value = vm.rawValue = moment(vm.date).format(vm.config.momentFormat);
 
     }
 
