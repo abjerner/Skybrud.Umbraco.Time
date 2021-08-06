@@ -1,18 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
-    <BuildInParallel>false</BuildInParallel>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <PropertyGroup>
     <RootNamespace>Skybrud.Umbraco.Time</RootNamespace>
-    <Version>1.0.0-beta003</Version>
+    <Version>2.0.0-alpha001</Version>
     <Company>Skybrud.dk a/s</Company>
     <Product>Skybrud.Umbraco.Time</Product>
     <Authors>Anders Bjerner</Authors>
     <Copyright>Copyright © 2021</Copyright>
-    <Description>Property editors for picking dates and time in Umbraco 8.</Description>
+    <Description>Property editors for picking dates and time in Umbraco 9.</Description>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -26,13 +25,10 @@
 
   <ItemGroup>
     <Reference Include="System.Web" />
-    <PackageReference Include="Skybrud.Essentials" Version="1.1.22" />
-    <PackageReference Include="UmbracoCms.Core" Version="8.1.0">
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="UmbracoCms.Web" Version="8.1.0">
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
+    <PackageReference Include="Skybrud.Essentials" Version="1.1.29" />
+    <PackageReference Include="Umbraco.Cms.Core" Version="9.0.0-rc001" />
+    <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.0.0-rc001" />
+    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.0.0-rc001" />
   </ItemGroup>
 
   <ItemGroup>

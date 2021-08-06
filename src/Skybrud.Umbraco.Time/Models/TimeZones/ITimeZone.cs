@@ -1,14 +1,12 @@
 ﻿using System;
-using Newtonsoft.Json;
+using System.Text.Json.Serialization;
 
 namespace Skybrud.Umbraco.Time.Models.TimeZones {
     
     public interface ITimeZone {
-
-        [JsonProperty("id")]
+        
         string Id { get; }
-
-        [JsonProperty("name")]
+        
         string Name { get; }
 
         [JsonIgnore]

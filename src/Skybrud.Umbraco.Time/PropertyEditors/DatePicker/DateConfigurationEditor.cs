@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Umbraco.Core.PropertyEditors;
+using Umbraco.Cms.Core.PropertyEditors;
 
 namespace Skybrud.Umbraco.Time.PropertyEditors.DatePicker {
 

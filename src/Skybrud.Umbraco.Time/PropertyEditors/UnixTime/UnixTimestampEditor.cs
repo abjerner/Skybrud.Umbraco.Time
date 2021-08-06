@@ -1,5 +1,5 @@
-﻿using Umbraco.Core.Logging;
-using Umbraco.Core.PropertyEditors;
+﻿using Umbraco.Cms.Core.IO;
+using Umbraco.Cms.Core.PropertyEditors;
 
 namespace Skybrud.Umbraco.Time.PropertyEditors.UnixTime {
 
@@ -8,6 +8,8 @@ namespace Skybrud.Umbraco.Time.PropertyEditors.UnixTime {
     /// </summary>
     [DataEditor(EditorAlias, EditorType.PropertyValue, "Skybrud Unix Timestamp", EditorView, Group = "Skybrud.dk", Icon = "icon-time", ValueType = EditorValueType)]
     public class UnixTimestampEditor : DataEditor {
+        
+        private readonly IIOHelper _ioHelper;
 
         #region Constants
 
@@ -22,14 +24,17 @@ namespace Skybrud.Umbraco.Time.PropertyEditors.UnixTime {
 
         #region Constructors
 
-        public UnixTimestampEditor(ILogger logger) : base(logger) { }
+        public UnixTimestampEditor(IDataValueEditorFactory dataValueEditorFactory, IIOHelper ioHelper) : base(dataValueEditorFactory)
+        {
+            _ioHelper = ioHelper;
+        }
 
         #endregion
 
         #region Member methods
 
         protected override IConfigurationEditor CreateConfigurationEditor()  {
-            return new UnixTimestampConfigurationEditor();
+            return new UnixTimestampConfigurationEditor(_ioHelper);
         }
 
         #endregion

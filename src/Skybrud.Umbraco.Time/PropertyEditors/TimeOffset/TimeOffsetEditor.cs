@@ -1,5 +1,5 @@
-﻿using Umbraco.Core.Logging;
-using Umbraco.Core.PropertyEditors;
+﻿using Umbraco.Cms.Core.IO;
+using Umbraco.Cms.Core.PropertyEditors;
 
 namespace Skybrud.Umbraco.Time.PropertyEditors.TimeOffset {
 
@@ -8,6 +8,8 @@ namespace Skybrud.Umbraco.Time.PropertyEditors.TimeOffset {
     /// </summary>
     [DataEditor(EditorAlias, EditorType.PropertyValue, "Skybrud Time Offset", EditorView, Group = "Skybrud.dk", Icon = "icon-time", ValueType = ValueTypes.String)]
     public class TimeOffsetEditor : DataEditor {
+        
+        private readonly IIOHelper _ioHelper;
 
         internal const string EditorAlias = "Skybrud.Umbraco.Time";
 
@@ -16,10 +18,12 @@ namespace Skybrud.Umbraco.Time.PropertyEditors.TimeOffset {
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffsetEditor"/> class.
         /// </summary>
-        public TimeOffsetEditor(ILogger logger) : base(logger) { }
+        public TimeOffsetEditor(IDataValueEditorFactory dataValueEditorFactory, IIOHelper ioHelper) : base(dataValueEditorFactory) {
+            _ioHelper = ioHelper;
+        }
 
         /// <inheritdoc/>
-        protected override IConfigurationEditor CreateConfigurationEditor() => new TimeOffsetConfigurationEditor();
+        protected override IConfigurationEditor CreateConfigurationEditor() => new TimeOffsetConfigurationEditor(_ioHelper);
 
     }
 
