@@ -8,7 +8,7 @@
   <PropertyGroup>
     <RootNamespace>Skybrud.Umbraco.Time</RootNamespace>
     <Version>1.0.0-beta003</Version>
-    <Company>Skybrud.dk a/s</Company>
+    <Company>Limbo</Company>
     <Product>Skybrud.Umbraco.Time</Product>
     <Authors>Anders Bjerner</Authors>
     <Copyright>Copyright © 2021</Copyright>
@@ -16,10 +16,10 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageTags>Skybrud, Umbraco, Time</PackageTags>
+    <PackageTags>Skybrud, Limbo, Umbraco, Time</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/abjerner/Skybrud.Umbraco.Time</PackageProjectUrl>
-    <PackageIconUrl>http://www.skybrud.dk/img/5431sk/icon/favicon.ico</PackageIconUrl>
+    <PackageIcon>Limbo.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/abjerner/Skybrud.Umbraco.Time</RepositoryUrl>
   </PropertyGroup>
@@ -42,6 +42,10 @@
     <Content Include="App_Plugins\Skybrud.Time\Lang\*.xml" />
     <None Remove="App_Plugins\Skybrud.Time\Styles\Default.min.css" />
     <Content Include="App_Plugins\Skybrud.Time\package.manifest" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Include="../build/Limbo.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <!--<PropertyGroup>
