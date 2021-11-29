@@ -4,6 +4,7 @@ using Umbraco.Core.Composing;
 
 namespace Skybrud.Umbraco.Time.Composers {
 
+    [RuntimeLevel(MinLevel = RuntimeLevel.Boot)]
     public class TimeComposer : IUserComposer {
 
         public void Compose(Composition composition) {
