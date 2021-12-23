@@ -3,6 +3,8 @@ using Skybrud.Umbraco.Time.Providers;
 using Umbraco.Web.Mvc;
 using Umbraco.Web.WebApi;
 
+#pragma warning disable 1591
+
 namespace Skybrud.Umbraco.Time.Controllers.Api.BackOffice {
     
     [PluginController("Skybrud")]

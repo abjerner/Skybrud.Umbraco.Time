@@ -6,6 +6,8 @@ using Umbraco.Core;
 using Umbraco.Core.Models.PublishedContent;
 using Umbraco.Core.PropertyEditors;
 
+#pragma warning disable 1591
+
 namespace Skybrud.Umbraco.Time.PropertyEditors.UnixTime {
     
     public class UnixTimestampValueConverter : PropertyValueConverterBase {
