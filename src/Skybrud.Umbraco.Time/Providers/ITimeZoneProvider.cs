@@ -2,7 +2,7 @@
 using Skybrud.Umbraco.Time.Models.TimeZones;
 
 namespace Skybrud.Umbraco.Time.Providers {
-    
+
     /// <summary>
     /// Interface describing a time zone provider.
     /// </summary>
@@ -13,7 +13,7 @@ namespace Skybrud.Umbraco.Time.Providers {
         /// </summary>
         /// <returns>A collection of <see cref="ITimeZone"/>.</returns>
         IEnumerable<ITimeZone> GetTimeZones();
-        
+
         /// <summary>
         /// Gets the time zone with the specified <paramref name="id"/>.
         /// </summary>

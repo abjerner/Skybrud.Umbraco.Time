@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 
 namespace Skybrud.Umbraco.Time.Models.TimeZones {
-    
+
     /// <summary>
     /// Interface representing a time zone.
     /// </summary>

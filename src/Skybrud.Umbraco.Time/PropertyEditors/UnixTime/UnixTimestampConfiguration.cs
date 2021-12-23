@@ -1,7 +1,7 @@
 ﻿using Umbraco.Core.PropertyEditors;
 
 namespace Skybrud.Umbraco.Time.PropertyEditors.UnixTime {
-        
+
     /// <summary>
     /// Configuration for <see cref="UnixTimestampEditor"/>.
     /// </summary>

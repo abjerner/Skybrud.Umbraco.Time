@@ -9,9 +9,9 @@ using Umbraco.Core.PropertyEditors;
 #pragma warning disable 1591
 
 namespace Skybrud.Umbraco.Time.PropertyEditors.UnixTime {
-    
+
     public class UnixTimestampValueConverter : PropertyValueConverterBase {
-        
+
         private readonly ITimeZoneProvider _timeZoneProvider;
 
         #region Constructors
@@ -33,7 +33,7 @@ namespace Skybrud.Umbraco.Time.PropertyEditors.UnixTime {
         }
 
         public override object ConvertIntermediateToObject(IPublishedElement owner, IPublishedPropertyType propertyType, PropertyCacheLevel referenceCacheLevel, object inter, bool preview) {
-            
+
             if (!(inter is string str) || str.Length <= 0 || !int.TryParse(str, out int seconds)) return null;
 
             // Find the selected time zone

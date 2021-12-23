@@ -31,9 +31,9 @@ namespace Skybrud.Umbraco.Time.PropertyEditors.UnixTime {
         #endregion
 
         #region Member methods
-        
+
         /// <inheritdoc />
-        protected override IConfigurationEditor CreateConfigurationEditor()  {
+        protected override IConfigurationEditor CreateConfigurationEditor() {
             return new UnixTimestampConfigurationEditor();
         }
 

@@ -6,7 +6,7 @@ using Umbraco.Web.WebApi;
 #pragma warning disable 1591
 
 namespace Skybrud.Umbraco.Time.Controllers.Api.BackOffice {
-    
+
     [PluginController("Skybrud")]
     public class TimeController : UmbracoAuthorizedApiController {
 

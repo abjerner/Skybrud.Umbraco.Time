@@ -3,7 +3,7 @@ using Umbraco.Core.PropertyEditors;
 using Umbraco.Web.PropertyEditors;
 
 namespace Skybrud.Umbraco.Time.PropertyEditors.DatePicker {
-    
+
     /// <summary>
     /// Represents a date picker property editor.
     /// </summary>
@@ -30,9 +30,7 @@ namespace Skybrud.Umbraco.Time.PropertyEditors.DatePicker {
         #endregion
 
         #region Member methods
-        
-        /// <inheritdoc />
-        
+
         /// <inheritdoc />
         protected override IConfigurationEditor CreateConfigurationEditor() => new DateConfigurationEditor();
 

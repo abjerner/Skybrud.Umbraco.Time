@@ -7,7 +7,7 @@ namespace Skybrud.Umbraco.Time.PropertyEditors.DatePicker {
     /// Configuration editor for <see cref="DateEditor"/>.
     /// </summary>
     public class DateConfigurationEditor : ConfigurationEditor {
-        
+
         /// <inheritdoc />
         public override IDictionary<string, object> ToValueEditor(object configuration) {
             var d = base.ToValueEditor(configuration);

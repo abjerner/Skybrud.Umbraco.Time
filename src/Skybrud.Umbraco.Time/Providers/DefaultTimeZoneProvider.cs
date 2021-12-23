@@ -5,7 +5,7 @@ using Skybrud.Umbraco.Time.Models.TimeZones;
 using TimeZone = Skybrud.Umbraco.Time.Models.TimeZones.TimeZone;
 
 namespace Skybrud.Umbraco.Time.Providers {
-    
+
     /// <summary>
     /// Default implementation for a time zone provider.
     /// </summary>
@@ -14,7 +14,7 @@ namespace Skybrud.Umbraco.Time.Providers {
         private List<ITimeZone> _timeZones;
 
         #region Member methods
-        
+
         /// <summary>
         /// Returns the time zones of the provider.
         /// </summary>

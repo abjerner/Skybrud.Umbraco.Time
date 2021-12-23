@@ -1,24 +1,24 @@
 ﻿using System;
 
 namespace Skybrud.Umbraco.Time.Models.TimeZones {
-    
+
     /// <summary>
     /// Class representing a time zone.
     /// </summary>
     public class TimeZone : ITimeZone {
 
         #region Properties
-        
+
         /// <summary>
         /// Gets unique identifier of the time zone.
         /// </summary>
         public string Id { get; }
-        
+
         /// <summary>
         /// Gets the friendly name of the time zone.
         /// </summary>
         public string Name { get; }
-        
+
         /// <summary>
         /// Gets the underlying <see cref="System.TimeZoneInfo"/> representing the time zone.
         /// </summary>
