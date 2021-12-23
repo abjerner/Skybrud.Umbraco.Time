@@ -1,5 +1,5 @@
-﻿using Umbraco.Core.Logging;
-using Umbraco.Core.PropertyEditors;
+﻿using Umbraco.Cms.Core.IO;
+using Umbraco.Cms.Core.PropertyEditors;
 
 namespace Skybrud.Umbraco.Time.PropertyEditors.TimeOffset {
 
@@ -9,11 +9,13 @@ namespace Skybrud.Umbraco.Time.PropertyEditors.TimeOffset {
     [DataEditor(EditorAlias, EditorType.PropertyValue, "Skybrud Time Offset", EditorView, Group = "Skybrud.dk", Icon = "icon-time color-skybrud", ValueType = ValueTypes.String)]
     public class TimeOffsetEditor : DataEditor {
 
+        private readonly IIOHelper _ioHelper;
+
         #region Constants
 
         internal const string EditorAlias = "Skybrud.Umbraco.Time";
 
-        internal const string EditorView = "/App_Plugins/Skybrud.Time/Views/Editors/TimePicker.html";
+        internal const string EditorView = "/App_Plugins/Skybrud.Umbraco.Time/Views/Editors/TimePicker.html";
 
         #endregion
 
@@ -22,14 +24,18 @@ namespace Skybrud.Umbraco.Time.PropertyEditors.TimeOffset {
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffsetEditor"/> class.
         /// </summary>
-        public TimeOffsetEditor(ILogger logger) : base(logger) { }
+        public TimeOffsetEditor(IDataValueEditorFactory dataValueEditorFactory, IIOHelper ioHelper) : base(dataValueEditorFactory) {
+            _ioHelper = ioHelper;
+        }
 
         #endregion
 
         #region Member methods
 
         /// <inheritdoc/>
-        protected override IConfigurationEditor CreateConfigurationEditor() => new TimeOffsetConfigurationEditor();
+        protected override IConfigurationEditor CreateConfigurationEditor() {
+            return new TimeOffsetConfigurationEditor(_ioHelper);
+        }
 
         #endregion
 

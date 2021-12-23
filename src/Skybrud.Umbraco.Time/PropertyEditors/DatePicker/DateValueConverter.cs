@@ -1,9 +1,9 @@
 ﻿using System;
 using Skybrud.Essentials.Time;
-using Umbraco.Core;
-using Umbraco.Core.Models.PublishedContent;
-using Umbraco.Core.PropertyEditors;
-using Umbraco.Core.PropertyEditors.ValueConverters;
+using Umbraco.Cms.Core.Models.PublishedContent;
+using Umbraco.Cms.Core.PropertyEditors;
+using Umbraco.Cms.Core.PropertyEditors.ValueConverters;
+using Umbraco.Extensions;
 
 namespace Skybrud.Umbraco.Time.PropertyEditors.DatePicker {
 

@@ -1,21 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net472</TargetFramework>
-    <BuildInParallel>false</BuildInParallel>
+    <LangVersion>9.0</LangVersion>
+    <TargetFramework>net5.0</TargetFramework>
+    <ContentTargetFolders>content</ContentTargetFolders>
   </PropertyGroup>
 
   <PropertyGroup>
-    <RootNamespace>Skybrud.Umbraco.Time</RootNamespace>
-    <Version>1.0.0-beta004</Version>
+    <Version>2.0.0-beta00006</Version>
     <Company>Limbo</Company>
     <Product>Skybrud.Umbraco.Time</Product>
     <Authors>Anders Bjerner</Authors>
     <Copyright>Copyright © 2021</Copyright>
-    <Description>Property editors for picking dates and time in Umbraco 8.</Description>
+    <Description>Property editors for picking dates and time in Umbraco 9.</Description>
   </PropertyGroup>
 
   <PropertyGroup>
+    <Title>Skybrud Time</Title>
     <PackageTags>Skybrud, Limbo, Umbraco, Time</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/abjerner/Skybrud.Umbraco.Time</PackageProjectUrl>
@@ -25,35 +26,35 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="System.Web" />
-    <PackageReference Include="Skybrud.Essentials" Version="1.1.22" />
-    <PackageReference Include="UmbracoCms.Core" Version="8.1.0">
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="UmbracoCms.Web" Version="8.1.0">
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
+    <!-- Include NuGet dependencies -->
+    <PackageReference Include="Skybrud.Essentials" Version="1.1.34" />
+    <PackageReference Include="Umbraco.Cms.Core" Version="9.0.0" />
+    <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.0.0" />
+    <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="App_Plugins\Skybrud.Time\**\*.css" />
-    <Content Include="App_Plugins\Skybrud.Time\**\*.html" />
-    <Content Include="App_Plugins\Skybrud.Time\**\*.js" />
-    <Content Include="App_Plugins\Skybrud.Time\Lang\*.xml" />
-    <None Remove="App_Plugins\Skybrud.Time\Styles\Default.min.css" />
-    <Content Include="App_Plugins\Skybrud.Time\package.manifest" />
+    <!-- Include backoffice assets -->
+    <Content Include="App_Plugins\Skybrud.Umbraco.Time\**\*.css" />
+    <Content Include="App_Plugins\Skybrud.Umbraco.Time\**\*.html" />
+    <Content Include="App_Plugins\Skybrud.Umbraco.Time\**\*.js" />
+    <Content Include="App_Plugins\Skybrud.Umbraco.Time\Lang\*.xml" />
+    <Content Include="App_Plugins\Skybrud.Umbraco.Time\package.manifest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Include the targets targets file -->
+    <Content Include="../build/$(AssemblyName).targets" PackagePath="build\$(AssemblyName).targets" />
   </ItemGroup>
   
   <ItemGroup>
+    <!-- Include package icon for NuGet -->
     <None Include="../build/Limbo.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <PropertyGroup>
+    <!-- Generate XML documentation -->
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
   </PropertyGroup>
-
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(ConfigurationName)'=='Release' AND '$(TargetFramework)'=='net472' AND '$(BuildTools)'=='1'">
-    <Exec Command="&quot;$(ProjectDir)..\build\Skybrud.BuildTools.Tasks.exe&quot; &quot;postBuild&quot; &quot;$(ConfigurationName)&quot; &quot;$(ProjectPath)&quot; &quot;$(TargetPath)&quot;" />
-  </Target>
 
 </Project>

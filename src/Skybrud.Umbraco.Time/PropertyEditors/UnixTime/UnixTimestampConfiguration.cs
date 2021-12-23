@@ -1,4 +1,4 @@
-﻿using Umbraco.Core.PropertyEditors;
+﻿using Umbraco.Cms.Core.PropertyEditors;
 
 namespace Skybrud.Umbraco.Time.PropertyEditors.UnixTime {
 
@@ -10,7 +10,7 @@ namespace Skybrud.Umbraco.Time.PropertyEditors.UnixTime {
         /// <summary>
         /// Gets or sets the unique identifer of the time zone to be used.
         /// </summary>
-        [ConfigurationField("timeZone", "Time zone", "/App_Plugins/Skybrud.Time/Views/Editors/TimeZone.html", Description = "Select the time zone of the returned <strong>EssentialsTime</strong>. This does not affect the value saved in Umbraco.")]
+        [ConfigurationField("timeZone", "Time zone", "/App_Plugins/Skybrud.Umbraco.Time/Views/Editors/TimeZone.html", Description = "Select the time zone of the returned <strong>EssentialsTime</strong>. This does not affect the value saved in Umbraco.")]
         public string TimeZone { get; set; }
 
         /// <summary>

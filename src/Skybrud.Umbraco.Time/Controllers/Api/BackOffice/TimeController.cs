@@ -1,7 +1,7 @@
-﻿using System.Web.Http;
+﻿using Microsoft.AspNetCore.Mvc;
 using Skybrud.Umbraco.Time.Providers;
-using Umbraco.Web.Mvc;
-using Umbraco.Web.WebApi;
+using Umbraco.Cms.Web.BackOffice.Controllers;
+using Umbraco.Cms.Web.Common.Attributes;
 
 #pragma warning disable 1591
 
@@ -24,7 +24,7 @@ namespace Skybrud.Umbraco.Time.Controllers.Api.BackOffice {
 
         [HttpGet]
         public object GetTimeZones() {
-            return Json(_timeZoneProvider.GetTimeZones());
+            return _timeZoneProvider.GetTimeZones();
         }
 
         #endregion

@@ -20,7 +20,7 @@ namespace Skybrud.Umbraco.Time.Providers {
         /// </summary>
         /// <returns>A collection of <see cref="ITimeZone"/>.</returns>
         public virtual IEnumerable<ITimeZone> GetTimeZones() {
-            return _timeZones ?? (_timeZones = GetTimeZonesInternal().ToList());
+            return _timeZones ??= GetTimeZonesInternal().ToList();
         }
 
         /// <summary>

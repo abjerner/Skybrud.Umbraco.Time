@@ -8,7 +8,7 @@ namespace Skybrud.Umbraco.Time.Models {
     /// <summary>
     /// Class representing a time offset.
     /// </summary>
-    [JsonConverter(typeof(ToStringJsonConverter))]
+    [JsonConverter(typeof(StringJsonConverter))]
     public class TimeOffset {
 
         private readonly TimeSpan _time;
