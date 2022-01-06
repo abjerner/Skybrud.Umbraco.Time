@@ -18,7 +18,7 @@ namespace Skybrud.Umbraco.Time.PropertyEditors.DatePicker {
         #endregion
 
         #region Constructors
-        
+
         /// <summary>
         /// Initializes a new instance of the <see cref="DateEditor"/> class.
         /// </summary>

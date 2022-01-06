@@ -7,7 +7,7 @@ namespace Skybrud.Umbraco.Time.PropertyEditors.TimeOffset {
     /// Represents the configuration editor for the time offset value editor.
     /// </summary>
     public class TimeOffsetConfigurationEditor : ConfigurationEditor<TimeOffsetConfiguration> {
-        
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffsetConfigurationEditor"/> class.
         /// </summary>
