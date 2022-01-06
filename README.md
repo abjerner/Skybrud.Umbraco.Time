@@ -10,29 +10,20 @@ While Umbraco already features a property editor for picking a date (or date and
 
 ## Installation
 
-**Install via NuGet**  
-This is the recommended approach, as you install the [**NuGet Package**][NuGetPackage] in your Visual Studio project, and NuGet takes care of the rest.
+The Umbraco 9 version of this package is only available via [NuGet](https://www.nuget.org/packages/Skybrud.Umbraco.Time/2.0.0). To install the package, you can use either .NET CLI:
 
 ```
-Install-Package Skybrud.Umbraco.Time -pre
+dotnet add package Skybrud.Umbraco.Time --version 2.0.0
 ```
-**Umbraco package**  
-Download the package from Our Umbraco - the Umbraco cummunity website:
 
-- <a href="https://our.umbraco.com/packages/backoffice-extensions/skybrud-time/" target="_blank"><strong>Download Umbraco package</strong></a>
+or the older NuGet Package Manager:
 
-**Manual install**  
-You can also download a ZIP file of the latest release directly from GitHub, unzip, and move the contents to the root directory of your web application.
+```
+Install-Package Skybrud.Umbraco.Time -Version 2.0.0
+```
 
-1. [**Download ZIP file**][GitHubRelease]  
-  Download the ZIP file directly from here on GitHub. The ZIP contains all necessary files to run the package.
-
-2. **Unzip**  
-  Unzip and move the contents to the root directory of your web application.
-  
-
-[NuGetPackage]: https://www.nuget.org/packages/Skybrud.Umbraco.Time
-[GitHubRelease]: https://github.com/abjerner/Skybrud.Umbraco.Time/releases
+**Umbraco 8**  
+For the Umbraco 8 version of this package, see the [**v1/main**](https://github.com/abjerner/Skybrud.Umbraco.Time/tree/v1/main) branch instead.
 
 ## Screenshots
 
