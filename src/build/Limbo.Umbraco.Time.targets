@@ -1,0 +1,28 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!--Based on: https://github.com/bergmania/Bergmania.OpenStreetMap/blob/main/Bergmania.OpenStreetMap/build/Bergmania.OpenStreetMap.targets -->
+
+  <PropertyGroup>
+    <LimboUmbracoTimeContentFilesPath>$(MSBuildThisFileDirectory)..\content\App_Plugins\Limbo.Umbraco.Time\**\*.*</LimboUmbracoTimeContentFilesPath>
+  </PropertyGroup>
+
+  <Target Name="CopyLimboUmbracoTimeAssets" BeforeTargets="Build">
+    <ItemGroup>
+      <LimboUmbracoTimeContentFiles Include="$(LimboUmbracoTimeContentFilesPath)" />
+    </ItemGroup>
+    <Message Text="Copying Limbo.Umbraco.Time files: $(LimboUmbracoTimeContentFilesPath) - #@(LimboUmbracoTimeContentFiles->Count()) files"  Importance="high" />
+    <Copy
+      SourceFiles="@(LimboUmbracoTimeContentFiles)"
+      DestinationFiles="@(LimboUmbracoTimeContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\Limbo.Umbraco.Time\%(RecursiveDir)%(Filename)%(Extension)')"
+      SkipUnchangedFiles="true" />
+  </Target>
+
+  <Target Name="ClearLimboUmbracoTimeAssets" BeforeTargets="Clean">
+    <ItemGroup>
+      <LimboUmbracoTimeDir Include="$(MSBuildProjectDirectory)\App_Plugins\Limbo.Umbraco.Time\" />
+    </ItemGroup>
+    <Message Text="Clear old Limbo.Umbraco.Time files"  Importance="high" />
+    <RemoveDir Directories="@(LimboUmbracoTimeDir)"  />
+  </Target>
+
+</Project>

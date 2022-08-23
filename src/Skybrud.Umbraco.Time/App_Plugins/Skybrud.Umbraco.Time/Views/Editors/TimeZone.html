@@ -1,6 +1,0 @@
-﻿<div class="skybrud-timezone" ng-controller="Skybrud.TimeZone.Controller as vm">
-    <div>
-        <umb-load-indicator ng-if="vm.loading"></umb-load-indicator>
-        <select ng-options="item as item.name for item in vm.timeZones track by item.id" ng-model="vm.timeZone" ng-change="vm.change()" ng-disabled="vm.loading"></select>
-    </div>
-</div>
